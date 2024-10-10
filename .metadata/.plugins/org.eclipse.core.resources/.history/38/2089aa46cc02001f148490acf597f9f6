@@ -1,0 +1,24 @@
+package NumberProgram_Method;
+
+public class Ques_11 {
+    
+    public static double findAverage(int n) {
+        if (n <= 0) {
+            System.out.println("Please enter a positive integer.");
+            return 0;
+        }
+        
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        
+        return (double) sum / n;
+    }
+    
+    public static void main(String[] args) {
+        int n = 10; // You can change this to any positive integer
+        double average = findAverage(n);
+        System.out.println("The average of all natural numbers up to " + n + " is: " + average);
+    }
+}

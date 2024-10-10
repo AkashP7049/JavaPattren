@@ -1,0 +1,43 @@
+package Number_Ques;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Step 1: Read the input string
+        System.out.println("Enter a string:");
+        String input = scanner.nextLine();
+
+        // Step 2: Initialize sets for alphabets and digits
+        Set<Character> alphabetSet = new TreeSet<>();
+        Set<Character> digitSet = new TreeSet<>();
+
+        // Step 3: Process the input string
+        for (char ch : input.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                alphabetSet.add(ch);
+            } else if (Character.isDigit(ch)) {
+                digitSet.add(ch);
+            }
+        }
+
+        // Step 4: Convert sets to sorted arrays
+        Character[] sortedAlphabets = alphabetSet.toArray(new Character[0]);
+        Character[] sortedDigits=digitSet.toArray(new Character[0]);
+        
+        System.out.println("Alphabets in asending order:");
+        for(char ch:sortedAlphabets){
+            System.out.print(ch+" ");
+        }
+        System.out.println();
+        
+        System.out.println("Digits in ascending Order:");
+        for(char ch:sortedDigits){
+            System.out.print(ch+" ");
+        }
+        System.out.println();
+        scanner.close();
+    }
+}

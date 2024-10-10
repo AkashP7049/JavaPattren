@@ -1,0 +1,34 @@
+package Array;
+import java.util.*;
+import java.util.Scanner;
+
+public class Two_D_Array {
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter an array size");
+		int row=sc.nextInt();
+		System.out.println("Enter the column size");
+		int col=sc.nextInt();
+		//create two d array
+		int [][] arr = new [row][col];
+		//enter element in array
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<col;j++)
+			{
+				arr[i][j]=sc.nextInt();
+				
+			}
+		}
+		//Display an array
+		for(int i=0;i<row;i++) {
+			for(int j=0;j<col;j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+
+}
